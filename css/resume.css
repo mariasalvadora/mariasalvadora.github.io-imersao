@@ -1,0 +1,39 @@
+body {/*Cor de fundo da pagina e fonte*/
+  background: rgb(24, 71, 90);
+  background-size: auto 100vh; /*100% do tamanho total da tela*/
+  font-family: Arial;
+  height: 100vh;
+}
+
+.menu {/*Cor de fundo do menu*/
+  background-color: white;
+}
+
+.menu ul {
+  display: flex; /*Força o conteudo em forma de linha*/
+  justify-content: space-around; /*Espaço entre as colunas*/
+}
+
+.menu li { /*Tira a marcação do menu*/
+  list-style: none;
+}
+
+a {
+  color: teal;/*Muda a cor da letra do menu*/
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+  color: whitesmoke;/*Muda a cor do h1
+  */
+  text-align: center; /*Centraliza o h1*/ 
+}
+
+.site-subtitle {
+  font-style: italic;
+}
