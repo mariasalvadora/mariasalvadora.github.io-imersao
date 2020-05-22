@@ -1,12 +1,45 @@
+/*Reset do CSS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {/*Cor de fundo da pagina e fonte*/
   background: rgb(24, 71, 90);
   background-size: auto 100vh; /*100% do tamanho total da tela*/
   font-family: Arial;
   height: 100vh;
+  font-size: 12px;
+}
+/*Se a tela tiver pelo menos 400px vai carregar estes estilos*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {/*Cor de fundo do menu*/
   background-color: white;
+  position: fixed;
+  width: 100vh;
+  top: 0;/*Faz o nav class="menu" ficar no topo da página*/
 }
 
 .menu ul {
@@ -18,6 +51,19 @@ body {/*Cor de fundo da pagina e fonte*/
   list-style: none;
 }
 
+.menu a {/*Aumentar o menu para cliks*/
+  display: block;
+  padding: 10px 20px; /*aumenta o tamanho do menu*/
+  transition: background-color 1s, color 1s;
+}
+
+.menu a:active,
+.menu a:hover { /*coor do menu*/
+  background-color: teal;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+}
+
 a {
   color: teal;/*Muda a cor da letra do menu*/
   text-decoration: none;
@@ -27,6 +73,20 @@ a:hover {
   text-decoration: underline;
 }
 
+/*.titulo { /*Muda o tamanho da fonte Maria Salvadora
+  transform: scale(0.2) translateY(50vh); 
+  opacity: 0;
+
+  animation: linear 2s animacaoTitulo;
+ }
+
+ @keyframes animacaoTitulo {
+   100%{
+      transform: scale(1) translateY(0);
+      opacity: 1;
+   }
+ }*/
+
 .site-subtitle,
 .site-title {
   color: whitesmoke;/*Muda a cor do h1
@@ -34,6 +94,134 @@ a:hover {
   text-align: center; /*Centraliza o h1*/ 
 }
 
+/*Entra a foto do perfil*/
+.site-title .perfil {
+  float: right;
+  margin-left: 2em;
+}
+
+/*.sobre .perfil img {
+  border-radius: 50%;
+}*/
+
+.site-title {
+  font-size: 4em;
+  font-family: 'Roboto',sans-serif;   
+}
+
 .site-subtitle {
   font-style: italic;
+  font-family: 'Merriweather', serif;
+  line-height: 1.8em;
+}
+.sobre,
+.contato,
+.portifolio {
+  padding: 2em;
+  min-height: 100vh;
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.sobre h2,
+.contato h2,
+.portifolio h2 {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 1.5em;
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+.sobre p {
+  color: white;
+  text-indent: 1.4em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre a {
+  /*color: white;*/
+  color: whitesmoke;
+  
+}
+
+.sobre a:hover {/*  manipula o link - imersao css*/
+  /*background-color: cyan;*/
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
+  text-decoration: underline;
+  transition: text-shadow 1s;
+}
+/*Coloca foto do perfil no Sobre*/ 
+.sobre .perfil {
+  float: right;
+  margin-left: 2em;
+}
+
+.sobre .perfil img {
+  border-radius: 50%;
+}
+
+.portifolio .grid {
+  display: grid;
+  gap: 2em;
+}
+
+.portifolio h2 {
+  text-align: center;/*Centraliza -aprendendo programar*/
+}
+
+@media (min-width: 560px) {
+  .portifolio .grid {
+   grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portifolio .grid {
+   grid-template-columns: repeat(3, 260px);
+   align-content: center;
+   justify-content: center;
+   height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portifolio figure {
+  text-align: center;
+}
+.img-portifolio {
+  height: 180px;
+  width: 240px;
+  object-fit: cover;
+  object-position: left bottom;
+  /*border-radius: 20%; deixa a imagem redonda*/
+  transition: transform 500ms;/*Aproxima a imagem de forma suave*/
+  
+}
+/*Aproxima a imagem quando passar o mouse em cima*/
+.img-portifolio a:hover {
+  transform: scale(1.2) rotateX(-2deg);
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 4.5em; 
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  /*text-shadow: 0px 0px 10px yellow;*/
+  text-shadow: 0px 0px 10px rgba(255,255,255,.5);
 }

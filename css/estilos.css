@@ -1,0 +1,13 @@
+body {
+    color: gray;
+}
+
+h1 {
+    margin: 20px;
+    border: 4px solid brown;
+    padding: 10px;
+
+    height: 100px;
+    width: 100px;
+
+    }

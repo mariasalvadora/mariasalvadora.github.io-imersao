@@ -2,21 +2,91 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <nav class="menu">
-        <ul>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Portifolio</a></li>
-            <li><a href="">Contato</a></li>
-        </ul>
-    </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Largura correta da pagina-->
+    <link rel="shortcut icon" href="imagens/teste.ico" type="image/x-icon">
     <title> Maria Salvadora</title>
-    <h1 class="site-title">Maria Salvadora</h1>
-    <h2 class="site-subtitle">Programadora jr. </h2>
-
     <link href="css/resume.css" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Eagle+Lake&family=Merriweather:wght@300;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/dda41e7234.js" crossorigin="anonymous"></script>
+
+    
+</head>    
+    
 <body>
+    <header>
+        <nav class="menu">
+            <ul class="container">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#portifolio">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="titulo">
+            <h1 class="site-title">Maria Salvadora</h1>
+            <h2 class="site-subtitle">Jr. Frontend Developer  </h2>
+        </div>
+    </header>
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+
+        <figure class="perfil">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHO_zZAc2ycoA/profile-displayphoto-shrink_200_200/0?e=1595462400&v=beta&t=vPNL2JCjUR6fIN50-GIz92UU1R1K__kFmz7qiV_ccdU" alt="Foto do perfil">
+        </figure>
+        <p>
+            Inicei a carreira de tecnologia através de um curso Técnico em Informática. Após um ano, consegui estágio no Ministério do Trabalho e com 28 dias de estágio, recebi uma proposta CLT. O contrato que eu fazia parte era volante, o que possibilitou ingresso em outros contratos, como: Ministério da Justiça, Aneel e Banco Central do Brasil. 
+        <p>   
+            No Banco Central, migrei para área de monitoração de sistemas, e foi onde tive acesso ao Mainframe, o que despertou bastante interesse em aprender. Fiz curso de TSO, JCL, DB2 e COBOL. Ao concluí-los, migrei para o Projeto Cartões - Caixa Econômica Federal. Foi uma experiência incrível, pois foi a oportunidade de colocar os conhecimentos em prática. Após um período, decidi mudar de estado. 
+        <p>   
+            Aproveitei a mudança para testar outras áreas, até de fato entender que a única coisa que faz sentido estudar é tecnologia. Pois é divertido aprender. É divertido fazer algo e ver o resultado. Ao observar o mercado, entendi que a porta de entrada é programação para web, então dedico-me a aprender(HTML5, CSS3 e JS). <a target="_blank" href="https://www.alura.com.br/imersao-css"> Imersão CSS da Alura</a>
+        </p>
+        
+    </section>
+    
+    <section class="portifolio container" id="portifolio">
+        <h2>Aprendendo a programar </h2>
+        
+        <div class="grid">
+            <figure>
+                <img 
+                 class="img-portfolio" src="imagens/html.png" alt=">Programação em HTML">
+                <figcaption> HTML</figcaption>
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="imagens/css.png" alt="CSS">
+                <figcaption>CSS</figcaption>
+            </figure>
+            <figure>
+                <img class="img-portfolio" src="imagens/js.png" alt="JavaScript">
+                <figcaption>JAVASCRIPT</figcaption>
+            </figure>
+
+        </div>
+		
+    </section>
+    
+    <section class="contato container"  id="contato">
+		<h2>Contato</h2>
+	
+		<div class="grid icons">
+            <a target="_blank" href="https://www.linkedin.com/in/mariasalvadora/">
+            <i class="fab fa-linkedin"></i>	
+            </a>
+            
+			<a target="_blank" href="https://github.com/mariasalvadora">
+			<i class="fab fa-github-square"></i>
+            </a>
+            
+			<a target="_blank" href="https://www.instagram.com/code.ana/">
+			<i class="fab fa-instagram"></i>
+            </a>
+
+            <a target="_blank" href=" http://api.whatsapp.com/send?1=pt_BR&phone=5548991407642">
+            <i class="fab fa-whatsapp"></i>
+            </a>
+
+		</div>
+	</section>
     
 </body>
 </html>
